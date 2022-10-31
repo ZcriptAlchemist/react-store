@@ -40,6 +40,18 @@
 .home,
 .cart {
   margin: 2rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.all-items-div {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -66,7 +78,7 @@ nav {
   align-items: center;
   border: 3px solid;
   box-shadow: 10px 10px;
-  width: 100%;
+  width: 60%;
 }
 
 .item > * {
@@ -74,8 +86,8 @@ nav {
 }
 
 .item-image {
-  height: 10rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
 }
 
 .item-btn {
@@ -97,20 +109,27 @@ nav {
   border: 2px solid black;
 }
 
-.all-items-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.row-div {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 70%;
-}
-
 .flags {
   font-size: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .all-items-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .nav-option {
+    font-size: 2rem;
+  }
 }
