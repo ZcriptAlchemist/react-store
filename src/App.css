@@ -77,8 +77,13 @@ nav {
   justify-content: center;
   align-items: center;
   border: 3px solid;
-  box-shadow: 10px 10px;
+  box-shadow: 5px 5px;
+  transition: 200ms;
   width: 60%;
+}
+
+.item:hover {
+  box-shadow: 10px 10px red;
 }
 
 .item > * {
@@ -90,7 +95,8 @@ nav {
   width: 100%;
 }
 
-.item-btn {
+.item-btn,
+.remove-btn {
   background-color: black;
   color: white;
   font-weight: bolder;
@@ -103,7 +109,8 @@ nav {
   cursor: pointer;
 }
 
-.item-btn:hover {
+.item-btn:hover,
+.remove-btn:hover {
   background-color: white;
   color: black;
   border: 2px solid black;
@@ -111,6 +118,77 @@ nav {
 
 .flags {
   font-size: 2rem;
+}
+
+/* cart page/item styling */
+
+.no-items {
+  margin-top: 10rem;
+  font-size: 4rem;
+}
+
+.cart-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item {
+  border: 5px solid black;
+  margin: 1rem;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px;
+  transition: 200ms;
+}
+
+.cart-item:hover {
+  box-shadow: 10px 10px red;
+}
+
+.cart-item > * {
+  margin: 1rem;
+  width: 70%;
+}
+
+.cart-item-img {
+  width: 50%;
+}
+
+.quantity-setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 1rem;
+}
+
+.quantity-setting > * {
+  margin: 0rem;
+  padding: 2px 1rem;
+  border: 1px solid black;
+  /* border-radius: 0px 10px; */
+}
+
+.quantity-setting > button {
+  background-color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 1rem;
+  margin: 0rem;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.plus-btn {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.minus-btn {
+  border-radius: 0px 10px 10px 0px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -131,5 +209,23 @@ nav {
 
   .nav-option {
     font-size: 2rem;
+  }
+
+  .cart-item {
+    width: 70%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-item > * {
+    margin: 0.5rem;
+    width: 100%;
+  }
+
+  .cart-item-img {
+    width: 90%;
   }
 }

@@ -1,12 +1,21 @@
 import React from "react";
 import Cart from "./Cart";
+import cartItems from "../util/cartItems.js";
 
 const Item = (item) => {
   //   console.log(item);
   const { image, name, gen, flag, price } = item;
   const addHandler = (image, name, gen, flag, price) => {
-    <Cart image={image} name={name} gen={gen} flag={flag} price={price} />;
+    cartItems.push({
+      name: name,
+      image: image,
+      gen: gen,
+      flag: flag,
+      price: price,
+    });
+    // console.log(cartItems);
   };
+
   return (
     <div className="item">
       <img className="item-image" src={image} alt="product-1" />
