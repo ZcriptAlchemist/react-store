@@ -19,7 +19,7 @@ const Item = (item) => {
 				gen: gen,
 				flag: flag,
 				price: price,
-				count: 0,
+				count: 1,
 			});
 		}
 		// console.log(cartItems);
